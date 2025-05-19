@@ -113,7 +113,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         return Padding(
                           padding: const EdgeInsets.only(top: 5),
                           child: Text(
-                            state.message,
+                            "Something went wrong, make sure you entered the correct email and password",
                             style: TextStyle(color: Colors.red[900]),
                           ),
                         );

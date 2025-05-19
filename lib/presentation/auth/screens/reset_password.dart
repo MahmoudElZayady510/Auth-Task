@@ -36,7 +36,7 @@ class ResetPassword extends StatelessWidget {
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
       showCustomSnackbar(
-          context, "Password Reset email was sent to your email", Colors.green);
+          context, "If this email is registered, you will receive a reset link.", Colors.green);
     } on FirebaseAuthException catch (e) {
       String errorMessage = "Something went wrong";
       if (e.code == 'user-not-found') {
